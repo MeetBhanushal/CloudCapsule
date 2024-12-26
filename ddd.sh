@@ -112,9 +112,9 @@ while [ "$1" != "" ]; do
                                 shift
                                 type=${1:-"null"}
                                 shift
-                                $port_number="$3"
-                                $second_port="$4"
-                                $ssh_port="$5"
+                                port_number="$3"
+                                second_port="$4"
+                                ssh_port="$5"
                                 create
                                 ;;
         -s | --start )          shift
