@@ -52,7 +52,7 @@ create () {
 	# read -p "Enter the second port number to map: " ssh_port
         docker create --restart unless-stopped -p $port_number:80 -p $second_port:7662 -p $ssh_port:22 --name $container -h $container kooljool/droplet:latest;
         docker start $container;
-        docker exec -it $container /bin/bash /usr/bin/ddrun;
+        docker exec -i $container /bin/bash /usr/bin/ddrun;
     fi
     echo "Created "$container
 }
